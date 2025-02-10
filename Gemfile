@@ -53,4 +53,5 @@ end
 group :development do
   gem "guard"
   gem "guard-rubocop"
+  gem "guard-rspec", require: false
 end
