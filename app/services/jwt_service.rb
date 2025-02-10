@@ -10,4 +10,4 @@ class JwtService
   rescue JWT::DecodeError
     nil
   end
-end 
+end

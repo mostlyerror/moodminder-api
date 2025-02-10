@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_secure_password
-  
+
   validates :email, presence: true, uniqueness: true,
             format: { with: URI::MailTo::EMAIL_REGEXP }
   validates :password, length: { minimum: 6 }, if: -> { new_record? || !password.nil? }
@@ -14,6 +14,6 @@ class User < ApplicationRecord
 
   def normalize_phone_number
     return if phone_number.nil?
-    self.phone_number = phone_number.gsub(/[^\d+]/, '')
+    self.phone_number = phone_number.gsub(/[^\d+]/, "")
   end
-end 
+end

@@ -34,4 +34,4 @@ RSpec.describe 'Api::V1::Authentication', type: :request do
       end
     end
   end
-end 
+end

@@ -50,4 +50,7 @@ group :development, :test do
   gem "shoulda-matchers", "~> 5.0"
 end
 
-
+group :development do
+  gem "guard"
+  gem "guard-rubocop"
+end

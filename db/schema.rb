@@ -21,8 +21,9 @@ ActiveRecord::Schema[7.2].define(version: 2025_02_08_233909) do
     t.string "last_name"
     t.string "phone_number"
     t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false  
+    t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["phone_number"], name: "index_users_on_phone_number", unique: true
   end
 end
+

@@ -7,11 +7,10 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    # TODO: change to your frontend domain
-    origins 'your-frontend-domain.vercel.app'
-    resource '*',
+    origins "your-frontend-domain.vercel.app"
+    resource "*",
       headers: :any,
-      methods: [:get, :post, :put, :patch, :delete, :options, :head],
+      methods: [ :get, :post, :put, :patch, :delete, :options, :head ],
       credentials: true
   end
 end

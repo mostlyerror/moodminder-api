@@ -7,4 +7,4 @@ FactoryBot.define do
     last_name { Faker::Name.last_name }
     phone_number { "+1#{Faker::Number.number(digits: 10)}" }
   end
-end 
+end
