@@ -4,7 +4,7 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true,
             format: { with: URI::MailTo::EMAIL_REGEXP }
   validates :password, length: { minimum: 6 }, if: -> { new_record? || !password.nil? }
-  validates :phone_number, uniqueness: true, allow_nil: true,
+  validates :phone_number, uniqueness: { case_sensitive: false }, allow_nil: true,
             format: { with: /\A\+?[\d\-\s\(\)]+\z/, message: "must be a valid phone number" }
 
   # Remove any non-digit characters before saving phone number
