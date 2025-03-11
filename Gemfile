@@ -30,7 +30,7 @@ gem "bootsnap", require: false
 # gem "rack-cors"
 
 # Twilio for SMS functionality
-gem 'twilio-ruby', '~> 6.0'
+gem 'twilio-ruby', '~> 7.4'
 
 # Whenever for cron job scheduling
 gem 'whenever', require: false
